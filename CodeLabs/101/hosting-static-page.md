@@ -18,9 +18,43 @@
 
 ## 3. Project 생성
 
+#### 1) 따라치기
 ```
 npm install -g firebase-tools
 firebase login
 firebase init
 firebase deploy
 ```
+
+#### 2) firebase login 시 브라우저를 통해 로그인
+
+![image](https://user-images.githubusercontent.com/33514304/51135113-a08b3600-187c-11e9-98cb-a65ad3c5fadf.png)
+
+![image](https://user-images.githubusercontent.com/33514304/51135120-a41ebd00-187c-11e9-8c4f-cd65e12c627b.png)
+
+![image](https://user-images.githubusercontent.com/33514304/51135135-b13bac00-187c-11e9-8f55-eb1793912adc.png)
+
+#### 3) Firebase init 프로젝트 생성
+
+![image](https://user-images.githubusercontent.com/33514304/51136012-caddf300-187e-11e9-948d-7694169a2088.png)
+
+## 4. Firebase Hosting 배포
+
+#### 1) public 디렉토리에 파일 생성
+
+```bash
+echo "<h1>Hello Pet Friends</h1>" > public/pf.html
+```
+
+#### 2) 배포
+
+
+```bash
+firebase deploy
+````
+
+![image](https://user-images.githubusercontent.com/33514304/51136189-3d4ed300-187f-11e9-852f-33c2903d0343.png)
+
+![image](https://user-images.githubusercontent.com/33514304/51136226-4cce1c00-187f-11e9-8673-35b9b37192f4.png)
+
+
