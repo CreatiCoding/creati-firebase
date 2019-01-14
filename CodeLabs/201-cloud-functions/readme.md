@@ -1,5 +1,9 @@
 # Firebase Cloud Functions
 
+## 0. Firebase Cloud Functions 로 할 수 있는 것들
+
+https://firebase.google.com/docs/functions/use-cases?hl=ko
+
 ## 1. Firebase Console 에 프로젝트 추가
 
 - 101 과 동일
