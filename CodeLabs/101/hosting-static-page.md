@@ -43,7 +43,7 @@ firebase deploy
 #### 1) public 디렉토리에 파일 생성
 
 ```bash
-echo "<h1>Hello Pet Friends<\/h1>" >> public/pf.html
+echo "<h1>Hello Pet Friends</h1>" > public/pf.html
 ```
 
 #### 2) 배포
