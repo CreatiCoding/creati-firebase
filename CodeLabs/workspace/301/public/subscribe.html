@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-functions.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyAVEor8s345aVdHly7n_Z9eKthm318_VtY",
+            authDomain: "creati-firebase.firebaseapp.com",
+            databaseURL: "https://creati-firebase.firebaseio.com",
+            projectId: "creati-firebase",
+            storageBucket: "creati-firebase.appspot.com",
+            messagingSenderId: "262117930691"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="subscribe()">공지사항 구독</button><br>
+    <script>
+        window.messaging = firebase.messaging();
+        window.messaging.usePublicVapidKey("BGotnagSqkhEwQkyWZYmWcPzzMeOKWiwENh4u1FsCA5FrIWA7mcBKlk8mNE2GEoMZsF5G3jSrIKIql_ov6k2kSM");
+        function subscribe() {
+            window.messaging.requestPermission().then(function () {
+                console.log('Notification permission granted.');
+                checkSubscribe();
+            }).catch(function (err) {
+                console.log('Unable to get permission to notify.', err);
+            });
+
+        }
+        function checkSubscribe() {
+            window.messaging.getToken().then(function (currentToken) {
+                if (currentToken) {
+                    console.log(currentToken);
+                } else {
+                    console.log('No Instance ID token available. Request permission to generate one.');
+                }
+            }).catch(function (err) {
+                console.log('An error occurred while retrieving token. ', err);
+            });
+        }
+    </script>
+</body>
+
+</html>
