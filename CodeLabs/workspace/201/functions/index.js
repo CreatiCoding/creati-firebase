@@ -4,7 +4,6 @@ const functions = require('firebase-functions');
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
 exports.helloWorld = functions.https.onRequest((request, response) => {
-    let name = request.query.name;
-    name = !name ? "starter" : name;
+    let name = request.query.name || "starter";
     response.send(`Hello, ${name} from Firebase!`);
 });
