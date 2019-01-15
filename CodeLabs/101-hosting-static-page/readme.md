@@ -1,5 +1,10 @@
 # Firebase Hosting for static resource
 
+
+## 0. Firebase Hosting 으로 할 수 있는 것들
+
+https://firebase.google.com/docs/hosting/use-cases?hl=ko
+
 ## 1. Firebase Console 에 프로젝트 추가
 
 ![image](https://user-images.githubusercontent.com/33514304/51134690-9f0d3e00-187b-11e9-92f9-4ff499c01d0b.png)
