@@ -27,6 +27,7 @@
 
 <body>
     <button type="button" onclick="subscribe()">공지사항 구독</button><br>
+    <textarea id="result"></textarea>
     <script>
         window.messaging = firebase.messaging();
         window.messaging.usePublicVapidKey("BGotnagSqkhEwQkyWZYmWcPzzMeOKWiwENh4u1FsCA5FrIWA7mcBKlk8mNE2GEoMZsF5G3jSrIKIql_ov6k2kSM");
@@ -43,6 +44,8 @@
             window.messaging.getToken().then(function (currentToken) {
                 if (currentToken) {
                     console.log(currentToken);
+                    alert(currentToken);
+                    document.querySelector("#result").innerText = currentToken;
                 } else {
                     console.log('No Instance ID token available. Request permission to generate one.');
                 }

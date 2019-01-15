@@ -2,7 +2,7 @@ const functions = require('firebase-functions');
 const request = require("request");
 var { google } = require('googleapis');
 
-const my_token = "d8uA7guRcFM:APA91bFBt3d9tRsKYBzJWwHVvA0pL_guonbxXxnNDaMVBFqmm4gu6nOwzUNoeMJB78m12gbp8zfbWtIvRzlDcv6C7aXbwFtS7HKilIN-4kZ8DRZAM55xATQRXSEKfKFmV1zo2T3J1dLb";
+const my_token = "duIY5J4xWMo:APA91bGyjiM34O44m9eV2xMoQR8dbbS6spRoDsFxIL94ybxa_yD5LP6hPx_DgNaURCrUkl43TkS09xV3BNXIHia3BPXH16zZ-BA06ILUwhya9WRixIPi9HQDkQRtZeJBsP1FbFM8PZd2";
 
 exports.requestFCM = functions.https.onRequest((req, res) => {
 
